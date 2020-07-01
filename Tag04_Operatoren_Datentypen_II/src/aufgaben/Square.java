@@ -1,17 +1,14 @@
 package aufgaben;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Square {
 	public static void main(String[] args) {
 		Square square = new Square();
-		int[] bi = new int[6];
-		bi[0] = 1;
-		bi[1] = 2;
-		bi[2] = 3;
-		bi[3] = 4;
-		bi[4] = 10;
-		bi[5] = 11;
-		for (int i = 0; i < bi.length; i++) {
-			square.doSquare(bi[i]);
+		List<Integer> bi = Arrays.asList(1,2,3,4,10,10);
+		for (Integer number : bi) {
+			square.doSquare(number);
 		}
 	}
 	public  void doSquare(int number) {
