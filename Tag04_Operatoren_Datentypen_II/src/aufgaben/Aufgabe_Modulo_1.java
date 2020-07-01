@@ -9,6 +9,7 @@ public class Aufgabe_Modulo_1 {
 		int modulo = zahl % 100;
 		System.out.println("Eingabe : "+zahl);
 		System.out.println("Das macht "+((zahl-modulo)/ 100)+" Euro und "+modulo+" Cent");
+		sc.close();
 	}
 
 }

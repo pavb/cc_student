@@ -15,6 +15,7 @@ public class Aufgabe_Modulo_2 {
 			int stunden = (zahl % d)/3600;
 			System.out.println(zahl+" Secunden sind "+tage+" Tag(e), "+stunden+" Stunde(n), "+minuten+" Minute(n), "+secunden+" Secunden(n)");
 		}
+		sc.close();
 	}
 
 }
