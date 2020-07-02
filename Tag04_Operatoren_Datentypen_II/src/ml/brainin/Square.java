@@ -6,7 +6,7 @@ import java.util.List;
 public class Square {
 	public static void main(String[] args) {
 		Square square = new Square();
-		List<Integer> bi = Arrays.asList(1,2,3,4,10,10);
+		List<Integer> bi = Arrays.asList(1,2,3,5,4,10,10);
 		for (Integer number : bi) {
 			square.doSquare(number);
 		}
