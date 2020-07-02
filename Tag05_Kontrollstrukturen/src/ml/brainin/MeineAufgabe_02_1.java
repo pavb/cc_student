@@ -8,8 +8,7 @@ public class MeineAufgabe_02_1 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		float price = 0;
-		System.out.print("Antworten sie mit Ja (j oder J) oder Nein (n oder N):");
+		System.out.print("Antworten sie mit Ja (j oder J) oder Nein (n oder N): ");
 		char chr = sc.next().charAt(0);
 		if (chr == 'j' || chr == 'J') {
 			System.out.println("Sie haben mit ja geantwortet");
