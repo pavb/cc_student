@@ -1,4 +1,4 @@
-package aufgaben;
+package ml.brainin;
 
 import java.util.*;
 public class Aufgabe_Modulo_1 {
