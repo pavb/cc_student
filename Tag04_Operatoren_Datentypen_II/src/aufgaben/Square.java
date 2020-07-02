@@ -8,7 +8,7 @@ public class Square {
 		Square square = new Square();
 		List<Integer> bi = Arrays.asList(1,2,3,4,10,10);
 		for (Integer number : bi) {
-			square.doSquare(number.intValue());
+			square.doSquare(number);
 		}
 	}
 	public  void doSquare(int number) {
