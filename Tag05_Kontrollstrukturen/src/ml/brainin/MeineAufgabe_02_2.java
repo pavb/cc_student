@@ -10,9 +10,9 @@ public class MeineAufgabe_02_2 {
 		Scanner sc = new Scanner(System.in);
 		int count = 0;
 		float price = 0;
-		System.out.printf("Bitte geben die Stückzahl \t");
+		System.out.println("Bitte geben die Stückzahl");
 		count = sc.nextInt();
-		System.out.printf("Bitte geben der Einzelpreis einer Ware  \t");
+		System.out.println("Bitte geben der Einzelpreis einer Ware");
 		price = (float)sc.nextInt();
 		if (count > 50) {
 			price *= 0.9f;

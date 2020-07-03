@@ -29,22 +29,19 @@ public class MeineAufgabe_01 {
 		List<Pair> bmis = Arrays.asList(new Pair(19,24),
 				new Pair(20,25),new Pair(21,26),new Pair(22,27),new Pair(23,28),new Pair(24,29));
 		
-		System.out.printf("Ihr Gewicht (kg) \t");
+		System.out.println("Ihr Gewicht (kg) ");
 		weight = sc.nextInt();
 		if (weight == 0) {
 			sc.close();
 			return;
 		}
-		System.out.println();
-		System.out.print("Ihre Größe (m) \t");
+		System.out.println("Ihre Größe (m)");
 		growth = sc.nextInt();
 		if (growth == 0) {
 			sc.close();
 			return;
 		}
-		System.out.println();
-
-		System.out.print("Ihr Alter (j) \t");
+		System.out.print("Ihr Alter (j)");
 		age = sc.nextInt();
 		if (age == 0) {
 			sc.close();
@@ -52,7 +49,7 @@ public class MeineAufgabe_01 {
 		}
 		System.out.println();
 		int bmi = (weight/ (growth*growth));
-		System.out.println("Ihr BMI beträgt \t"+ bmi);
+		System.out.println("Ihr BMI beträgt"+ bmi);
 		if (age >= 19 && age <=24) {
 			result = bmis.get(0).isAllRight(bmi);
 		}else if (age >=25 && age <=34) {
