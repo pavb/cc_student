@@ -32,6 +32,20 @@ public class Kuh {
 	private int drMilchMelken = 24; // tägliche durchschnittliche Milchmelken (kg)
 	private int milchMelken = drMilchMelken; 
 	
+	public static void main(String[] args) {
+		Kuh kuh1 = new Kuh("Ruddy", "schwarz", "weiss");
+		Kuh kuh2 = new Kuh("Sally", "weiss", "schwarz");
+		kuh1.setGewicht(650);
+		kuh2.setGewicht(750);
+		
+		System.out.println("kuh1 hashCode : "+kuh1.hashCode());
+		System.out.println(kuh1.toString());
+		System.out.println("isUeberGewicht : "+kuh1.isUeberGewicht());
+		System.out.println("---------------");
+		System.out.println("kuh2 hashCode : "+kuh2.hashCode());
+		System.out.println(kuh2.toString());
+		System.out.println("isUeberGewicht : "+kuh2.isUeberGewicht());
+	}
 	public Kuh(String name, String hauptFarbe, String fleckenFarbe) {
 		this.name = name;
 		this.hauptFarbe = hauptFarbe;
@@ -73,6 +87,6 @@ public class Kuh {
 	}
 	
 	public String toString() {
-		return "Kuh name : "+name+"\nHauptfarbe : "+hauptFarbe+"\nFleckenfarbe :"+fleckenFarbe +" Aktuelles Gewicht : "+gewicht;
+		return "Kuh name : "+name+"\nHauptfarbe : "+hauptFarbe+"\nFleckenfarbe :"+fleckenFarbe +"\nAktuelles Gewicht : "+gewicht;
 	}
 }
