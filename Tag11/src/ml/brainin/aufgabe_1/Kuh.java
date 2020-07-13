@@ -1,4 +1,6 @@
-package ml.brainin;
+package ml.brainin.aufgabe_1;
+import java.util.concurrent.ThreadLocalRandom;
+
 
 public class Kuh {
 	
@@ -25,9 +27,6 @@ public class Kuh {
 		System.out.println(kuh2.toString());
 		System.out.println("isUeberGewicht : "+kuh2.isUeberGewicht());
 	}
-	
-	
-	
 	public Kuh(String name, String hauptFarbe, String fleckenFarbe) {
 		this.name = name;
 		this.hauptFarbe = hauptFarbe;
@@ -68,6 +67,9 @@ public class Kuh {
 		return gewicht > maxGewicht;
 	}
 	
+	public int milken() {
+		return ThreadLocalRandom.current().nextInt(drMilchMelken/2, drMilchMelken + 1);
+	}
 	public String toString() {
 		return "Kuh name : "+name+"\nHauptfarbe : "+hauptFarbe+"\nFleckenfarbe :"+fleckenFarbe +"\nAktuelles Gewicht : "+gewicht;
 	}
