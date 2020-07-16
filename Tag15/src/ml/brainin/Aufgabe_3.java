@@ -6,17 +6,17 @@ public class Aufgabe_3 {
 	static Random random = new Random();
 	public static void main(String[] args) {
 		System.out.println("Wie viele Ziehungen durchgefuehrt werden sollen ? ");
-		getZahlenArray(lottoZahlen);
+		fuellungZahlenArray(lottoZahlen);
 		sort(lottoZahlen);
 		boolean down = false;
 		int zyklus = 1;
 		int maxIndentischer = 0;
 		while(!down) {
 			int[] zahlen = new int[arrayLenght]; 
-			getZahlenArray(zahlen);
+			fuellungZahlenArray(zahlen);
 			sort(zahlen);
 			print(zahlen);
-			int identischer = compare(zahlen); 
+			int identischer = gleichen(zahlen); 
 			down = identischer == arrayLenght - 1;
 			System.out.println("Identischer : "+ identischer+" zyklus : "+zyklus);
 			System.out.println("----------------------------------");
@@ -38,7 +38,7 @@ public class Aufgabe_3 {
 		}
 		System.out.println();
 	}
-	static int compare(int[] zahlen) {
+	static int gleichen(int[] zahlen) {
 		int count = 0;
 		for (int i = 0; i < zahlen.length; i++) {
 			for (int j = 0; j < lottoZahlen.length; j++) {
@@ -47,7 +47,7 @@ public class Aufgabe_3 {
 		}
 		return count;
 	}
-	static void getZahlenArray(int[] zahlen) {
+	static void fuellungZahlenArray(int[] zahlen) {
 		int count = 0;
 		while(count < zahlen.length) {
 			int zahl = getZahl(zahlen);
