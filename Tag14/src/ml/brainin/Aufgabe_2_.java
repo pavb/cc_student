@@ -9,7 +9,7 @@ Fuehren Sie solange Ziehungen durch, bis die Zahlen vom Nutzer gezogen wurden un
 lassen Sie die Anzahl der Versuche ausgeben.
 Sortieren Sie das Array einer Ziehung zur Pruefung mit einem BubbleSort
  */
-public class Aufgabe_2 {
+public class Aufgabe_2_ {
 	static int[] zahlen = new int[6];
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
