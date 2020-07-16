@@ -56,7 +56,7 @@ class DynamischesArray {
 }
 
 public class DynamischesArrayMain {
-	final static int arrayLeght = 5;
+	final static int arrayLeght = 2;
 	final static int totalTestCycles = 5;
 	final static int ramdomEnd = 50;
 	
@@ -76,5 +76,13 @@ public class DynamischesArrayMain {
 			dynamischesArray.printArray();
 			System.out.println("---------------");
 		}
+		byte i = 10;
+		byte j = 5;
+		go(i, j);
+	}
+	static void go(short i, short j) {
+		System.out.println("33");
+	}
+	static void go(byte... bt) {
 	}
 }
