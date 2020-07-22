@@ -1,6 +1,7 @@
 package ml.brainin.wettrennens;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Wettrennen {
 	public static void main(String[] args) {
@@ -20,6 +21,7 @@ public class Wettrennen {
 		fahrzeuge.add(krankenwagen);
 		
 		Fahrzeug gewinner = null;
+		Collections.sort(fahrzeuge);
 		System.out.println("------------------------------------");
 		for (Fahrzeug fahrzeug : fahrzeuge) {
 			if (gewinner == null) {

@@ -1,6 +1,6 @@
 package ml.brainin.wettrennens;
 
-public class Fahrzeug {
+public class Fahrzeug implements Comparable<Fahrzeug>{
 	private String namen;
 	private double geschwindigkeit = 0;
 	private double maxGeschwindigkeit = 0;
@@ -66,6 +66,11 @@ public class Fahrzeug {
 				+ maxGeschwindigkeit + ",\naktualePosition=" + aktualePosition + ",\ndrivers=" + drivers + ",\ndistanz="
 				+ distanz + "]";
 	}
-	
+
+	@Override
+	public int compareTo(Fahrzeug o) {
+		return this.distanz < o.getDistanz()? 1:-1;
+	}
+
 
 }
