@@ -7,7 +7,6 @@ public class Kind extends Tier {
 	}
 	private Tier vater;
 	private Tier mutter;
-	boolean isMaenlich;
 	
 	public Tier getVater() {
 		return vater;
@@ -21,20 +20,13 @@ public class Kind extends Tier {
 	public void setMutter(Tier mutter) {
 		this.mutter = mutter;
 	}
-	public boolean isMaenlich() {
-		return isMaenlich;
-	}
-	public void setMaenlich(boolean isMaenlich) {
-		this.isMaenlich = isMaenlich;
-	}
 	public Kind() {
 		this("Standartkindname", 10, new Tier(), new Tier(), false);
 	}
 	public Kind(String name, int gewicht, Tier vater, Tier mutter, boolean isMaenlich) {
-		super(name, gewicht);
+		super(name, gewicht, isMaenlich);
 		this.setVater(vater);
 		this.setMutter(mutter);
-		this.setMaenlich(isMaenlich);
 		System.out.println(toString());
 	}
 	

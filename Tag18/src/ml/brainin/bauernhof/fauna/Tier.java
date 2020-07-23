@@ -5,6 +5,15 @@ public class Tier {
 	private int gewicht = 0;
 	private double verkaufsPreis = 0;
 	private long id = System.currentTimeMillis();
+	boolean isMaenlich;
+	
+	public boolean isMaenlich() {
+		return isMaenlich;
+	}
+	public void setMaenlich(boolean isMaenlich) {
+		this.isMaenlich = isMaenlich;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -36,16 +45,17 @@ public class Tier {
 	}
 
 	public Tier() {
-		this("Standartname", 50);
+		this("Standartname", 50, false);
 	}
-	public Tier(String name, int gewicht) {
-		super();
+	public Tier(String name, int gewicht, boolean isMaenlich) {
 		this.name = name;
 		this.gewicht = gewicht;
+		this.isMaenlich = isMaenlich;
 	}
 	public String toString() {
 		String ausgabe = "";
 		ausgabe += "\nName: "+ this.getName();
+		ausgabe += "\nisMaenlich: "+ this.isMaenlich();
 		ausgabe += "\nGewicht: " + this.getGewicht()+" kg";
 		ausgabe += "\nVerkaufsPreis: " + this.getVerkaufsPreis()+" euro/kg";
 		return ausgabe;

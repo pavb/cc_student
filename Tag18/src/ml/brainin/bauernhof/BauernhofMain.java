@@ -28,15 +28,11 @@ public class BauernhofMain {
 		Bauer bauer = new Bauer("Tomas", 86, 180, 28, new Stall("Stall 1"));
 
 		
-		Kuh kuh1 = new Kuh("Ruddy", "schwarz", "weiss", 650);
-		Kuh kuh2 = new Kuh("Sally", "weiss", "schwarz", 750);
-		Schwein schwein1 = new Schwein("Marta", 70);
-		Schwein schwein2 = new Schwein("Moriz", 65);
+		Kuh kuh1 = (Kuh)bauer.getStall().getKuehe().get(0);
+		Kuh kuh2 = (Kuh)bauer.getStall().getKuehe().get(1);
+		Schwein schwein1 = (Schwein)bauer.getStall().getSchweine().get(0);
+		Schwein schwein2 = (Schwein)bauer.getStall().getSchweine().get(1);
 		
-		bauer.getStall().addKuh(kuh1);
-		bauer.getStall().addKuh(kuh2);
-		bauer.getStall().addSchwein(schwein1);
-		bauer.getStall().addSchwein(schwein2);
 		System.out.println("\n--------------------------------------\nVermehrung\n--------------------------------------");
 		
 		for (int i = 0; i < 10; i++) {

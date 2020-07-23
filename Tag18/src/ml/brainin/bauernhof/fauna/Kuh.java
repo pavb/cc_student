@@ -11,8 +11,8 @@ public class Kuh extends Tier{
 	private int drMilchMelken = 24; // tägliche durchschnittliche Milchmelken (kg)
 	private int milchMelken = drMilchMelken; 
 
-	public Kuh(String name, String hauptFarbe, String fleckenFarbe, int gewiht) {
-		super(name, gewiht);
+	public Kuh(String name, String hauptFarbe, String fleckenFarbe, int gewiht, boolean isMaenlich) {
+		super(name, gewiht, isMaenlich);
 		this.hauptFarbe = hauptFarbe;
 		this.fleckenFarbe = fleckenFarbe;
 		setVerkaufsPreis(7.5);

@@ -4,6 +4,7 @@ import java.awt.List;
 import java.util.ArrayList;
 
 import ml.brainin.bauernhof.fauna.Kuh;
+import ml.brainin.bauernhof.fauna.Schwein;
 
 public class Bauer {
 	private String name;
@@ -26,6 +27,20 @@ public class Bauer {
 		this.setGroesse(groesse);
 		this.setAlter(alter);
 		this.setStall(stall);
+		
+		
+		Kuh kuh1 = new Kuh("Ruddy", "schwarz", "weiss", 650, true);
+		Kuh kuh2 = new Kuh("Sally", "weiss", "schwarz", 750, false);
+		Schwein schwein1 = new Schwein("Moriz", 65, true);
+		Schwein schwein2 = new Schwein("Marta", 70, false);
+		
+		
+		stall.addKuh(kuh1);
+		stall.addKuh(kuh2);
+		stall.addSchwein(schwein1);
+		stall.addSchwein(schwein2);
+
+				
 		System.out.println(toString());
 		eimer = new Eimer();
 	}
