@@ -30,12 +30,8 @@ public class BauernhofMain {
 		
 		Kuh kuh1 = new Kuh("Ruddy", "schwarz", "weiss", 650);
 		Kuh kuh2 = new Kuh("Sally", "weiss", "schwarz", 750);
-		kuh1.setVerkaufsPreis(7.5);
-		kuh2.setVerkaufsPreis(7.5);
 		Schwein schwein1 = new Schwein("Marta", 70);
 		Schwein schwein2 = new Schwein("Moriz", 65);
-		schwein1.setVerkaufsPreis(5.5);
-		schwein2.setVerkaufsPreis(5.5);
 		
 		bauer.getStall().addKuh(kuh1);
 		bauer.getStall().addKuh(kuh2);

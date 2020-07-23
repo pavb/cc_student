@@ -15,6 +15,7 @@ public class Kuh extends Tier{
 		super(name, gewiht);
 		this.hauptFarbe = hauptFarbe;
 		this.fleckenFarbe = fleckenFarbe;
+		setVerkaufsPreis(7.5);
 		System.out.println(toString());
 	}
 

@@ -9,6 +9,7 @@ public class Schwein extends Tier{
 	}
 	public Schwein(String name, int gewicht) {
 		super(name, gewicht);
+		setVerkaufsPreis(5.5);
 		System.out.println(toString());
 
 	}
