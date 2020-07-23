@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import ml.brainin.bauernhof.fauna.Ferkel;
 import ml.brainin.bauernhof.fauna.Kuh;
 import ml.brainin.bauernhof.fauna.Schwein;
-import ml.brainin.bauernhof.fauna.Tier;
+import ml.brainin.bauernhof.fauna.ATier;
 
 public class Stall {
 	
 	private int maxAnzahl = 10;
-	private ArrayList<Tier> kuehe = new ArrayList<>();
-	private ArrayList<Tier> schweine = new ArrayList<>();
+	private ArrayList<ATier> kuehe = new ArrayList<>();
+	private ArrayList<ATier> schweine = new ArrayList<>();
 	private long id = System.currentTimeMillis();
 	private String name;
 	
@@ -46,9 +46,9 @@ public class Stall {
 		schweine.add(ferkel);
 	}
 	
-	public Tier verkaufenSchwein(Schwein schwein) {
+	public ATier verkaufenSchwein(Schwein schwein) {
 		for( int i = schweine.size()-1; i >= 0 ; i--) {
-			Tier schwein1 = schweine.get(i);
+			ATier schwein1 = schweine.get(i);
 			if (schwein1.equals(schwein)) {
 				schweine.remove(i);
 				return schwein1;
@@ -58,9 +58,9 @@ public class Stall {
 	}
 	
 	
-	public Tier verkaufenKuh(Kuh kuh) {
+	public ATier verkaufenKuh(Kuh kuh) {
 		for( int i = kuehe.size()-1; i >= 0 ; i--) {
-			Tier kuh1 = kuehe.get(i);
+			ATier kuh1 = kuehe.get(i);
 			if (kuh1.equals(kuh)) {
 				kuehe.remove(i);
 				return kuh1;
@@ -88,19 +88,19 @@ public class Stall {
 	public double getGesamtesKontostand() {
 		return getKueheKontostand() + getGesamtesKontostand();
 	}
-	public ArrayList<Tier> getKuehe() {
+	public ArrayList<ATier> getKuehe() {
 		return kuehe;
 	}
 
-	public void setKuehe(ArrayList<Tier> kuehe) {
+	public void setKuehe(ArrayList<ATier> kuehe) {
 		this.kuehe = kuehe;
 	}
 
-	public ArrayList<Tier> getSchweine() {
+	public ArrayList<ATier> getSchweine() {
 		return schweine;
 	}
 
-	public void setSchweine(ArrayList<Tier> schweine) {
+	public void setSchweine(ArrayList<ATier> schweine) {
 		this.schweine = schweine;
 	}
 

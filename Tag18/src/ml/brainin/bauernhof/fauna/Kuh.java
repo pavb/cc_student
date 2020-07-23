@@ -2,7 +2,7 @@ package ml.brainin.bauernhof.fauna;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class Kuh extends Tier{
+public class Kuh extends ATier{
 	
 	//Attribute
 	private String hauptFarbe = "";
@@ -69,6 +69,12 @@ public class Kuh extends Tier{
 	}
 	public int getMilchMelken() {
 		return milchMelken;
+	}
+
+	@Override
+	public void makeGeraeusch() {
+		System.out.println("Enen Kuh  "+getName()+"  macht Geraeusch");
+		
 	}
 
 }

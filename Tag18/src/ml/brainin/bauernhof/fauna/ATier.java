@@ -1,11 +1,12 @@
 package ml.brainin.bauernhof.fauna;
 
-public class Tier {
+public abstract class ATier {
 	private String name = "";
 	private int gewicht = 0;
 	private double verkaufsPreis = 0;
 	private long id = System.currentTimeMillis();
 	boolean isMaenlich;
+	public abstract void makeGeraeusch();
 	
 	public boolean isMaenlich() {
 		return isMaenlich;
@@ -40,14 +41,14 @@ public class Tier {
 		this.id = id;
 	}
 	
-	public boolean equals(Tier tier) {
+	public boolean equals(ATier tier) {
 		return this.id == tier.getId();
 	}
 
-	public Tier() {
+	public ATier() {
 		this("Standartname", 50, false);
 	}
-	public Tier(String name, int gewicht, boolean isMaenlich) {
+	public ATier(String name, int gewicht, boolean isMaenlich) {
 		this.name = name;
 		this.gewicht = gewicht;
 		this.isMaenlich = isMaenlich;

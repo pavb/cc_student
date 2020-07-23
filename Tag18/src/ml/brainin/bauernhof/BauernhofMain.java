@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import ml.brainin.bauernhof.fauna.Kuh;
 import ml.brainin.bauernhof.fauna.Schwein;
-import ml.brainin.bauernhof.fauna.Tier;
+import ml.brainin.bauernhof.fauna.ATier;
 
 public class BauernhofMain {
 	private ArrayList<Bauer> dieBauer = new ArrayList<>();
@@ -45,14 +45,21 @@ public class BauernhofMain {
 			}
 		}
 		
+		for (ATier atier: bauer.getStall().getKuehe()) {
+			atier.makeGeraeusch();
+		}
+		for (ATier atier: bauer.getStall().getSchweine()) {
+			atier.makeGeraeusch();
+		}
+		
 		System.out.println("\n\n--------------------------------------");
-		Tier schw1 = bauer.getStall().verkaufenSchwein(schwein1);
+		ATier schw1 = bauer.getStall().verkaufenSchwein(schwein1);
 		if (schw1 != null) {
 			bauernhofMain.setKontostand(bauernhofMain.getKontostand() + schw1.getVerkaufsPreis()* schw1.getGewicht());
 			System.out.println("Ein Schwein wurde verkauft.\n\n"+schw1.toString()+"\n\nDer Kontostand ist : "+ bauernhofMain.getKontostand());
 		}
 		System.out.println("\n\n--------------------------------------");
-		Tier k1 = bauer.getStall().verkaufenKuh(kuh1);
+		ATier k1 = bauer.getStall().verkaufenKuh(kuh1);
 		if (k1 != null) {
 			bauernhofMain.setKontostand(bauernhofMain.getKontostand() + k1.getVerkaufsPreis()* k1.getGewicht());
 			System.out.println("\nEine Kuh wurde verkauft.\n\n"+k1.toString()+"\n\nDer Kontostand ist : "+ bauernhofMain.getKontostand());
