@@ -27,13 +27,13 @@ public class BauernhofMain {
 		BauernhofMain bauernhofMain = new BauernhofMain();
 		Bauer bauer = new Bauer("Tomas", 86, 180, 28, new Stall("Stall 1"));
 
+		System.out.println("\n--------------------------------------\nVermehrung\n--------------------------------------");
 		
 		Kuh kuh1 = (Kuh)bauer.getStall().getKuehe().get(0);
 		Kuh kuh2 = (Kuh)bauer.getStall().getKuehe().get(1);
 		Schwein schwein1 = (Schwein)bauer.getStall().getSchweine().get(0);
 		Schwein schwein2 = (Schwein)bauer.getStall().getSchweine().get(1);
 		
-		System.out.println("\n--------------------------------------\nVermehrung\n--------------------------------------");
 		
 		for (int i = 0; i < 10; i++) {
 			int k =(int)(Math.random()*49 +1);

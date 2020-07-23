@@ -27,8 +27,12 @@ public class Bauer {
 		this.setGroesse(groesse);
 		this.setAlter(alter);
 		this.setStall(stall);
+
+		System.out.println(toString());
 		
-		
+		System.out.println("\n--------------------------------------\nTiere:"
+				+ "\n--------------------------------------");
+
 		Kuh kuh1 = new Kuh("Ruddy", "schwarz", "weiss", 650, true);
 		Kuh kuh2 = new Kuh("Sally", "weiss", "schwarz", 750, false);
 		Schwein schwein1 = new Schwein("Moriz", 65, true);
@@ -41,7 +45,6 @@ public class Bauer {
 		stall.addSchwein(schwein2);
 
 				
-		System.out.println(toString());
 		eimer = new Eimer();
 	}
 	
@@ -90,7 +93,7 @@ public class Bauer {
 	}
 	public String toString() {
 		String ausgabe = "";
-		ausgabe += "-----------Bauer: ";
+		ausgabe += "Bauer: ";
 		ausgabe += "\nName: " + this.getName();
 		ausgabe += "\nGewicht: " + this.getGewicht();
 		ausgabe += "\nStall: "+this.getStall().getName();
