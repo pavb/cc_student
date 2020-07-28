@@ -11,7 +11,7 @@ public class MyNumber {
 		this.setDenumerator(denumerator);
 	}
 	
-	public MyNumber parser(String number) {
+	public MyNumber parser(String number) throws NumberFormatException{
 		try {
 			int num = Integer.parseInt(number); // ganze Zahl
 			this.setNumerator(num);
@@ -67,19 +67,22 @@ public class MyNumber {
 		return hasSlash;
 	}
 	private void setHasSlash() {
-		hasSlash = true;
+		this.hasSlash = true;
 	}
 	private boolean hasPoint() {
 		return hasPoint;
 	}
 	private void setHasPoint() {
-		hasPoint = true;
+		this.hasPoint = true;
 	}
 	private void setNumerator(int n) {
-		numerator = n;
+		this.numerator = n;
 	}
 	private void setDenumerator(int d) {
-		denumerator = d;
+		if (d == 0) {
+			throw new NumberFormatException("Fehler beim denumerator : 0");
+		}
+		this.denumerator = d;
 	}
 	public int getNumerator() {
 		return numerator;
