@@ -1,6 +1,6 @@
 package ml.brainin;
 
-public class CombustibleMaterial {
+public class CombustibleMaterial implements ICombustible {
 	private final int MIN_TEMPERATURE = 100;
 	private String name;
 	private int temperature;
@@ -34,9 +34,9 @@ public class CombustibleMaterial {
 	public String toString() {
 		return "CombustibleMaterial [name=" + name + ", temperature=" + temperature + "]";
 	}
-	
-	public void burning(ICombustible iCombustible) throws RuntimeException{
-		System.out.println("Burning "+toString());
-		iCombustible.burning(getTemperature());
+
+	@Override
+	public int getCombustionTemperature() throws RuntimeException {
+		return this.getTemperature();
 	}
 }

@@ -1,21 +1,20 @@
 package ml.brainin;
 
-public class Oven implements ICombustible{
+public class Oven {
 	private int maxTemprature;
 	private int currentTemprature;
 
-	@Override
 	public void gefrigerate(int temperature) throws RuntimeException {
 		this.setCurrentTemprature(this.getCurrentTemprature() - temperature);
-		System.out.println("Rerfegerated. : "+temperature+" "+ toString());
+		System.out.println("Rerfegerated. : "+temperature+"\n"+ toString());
 		if (this.getCurrentTemprature() > getMaxTemprature()) {
 			throw new RuntimeException("We can't cool it down, there will be an explosion! aaaaaaa ......");
 		}
 	}
 	
-	@Override
-	public void burning(int temperature) throws RuntimeException {
-		this.setCurrentTemprature(this.getCurrentTemprature()+ temperature);
+	public void burning(ICombustible iCombustible) throws RuntimeException {
+		this.setCurrentTemprature(this.getCurrentTemprature()+ iCombustible.getCombustionTemperature());
+		System.out.println("Burning : "+ iCombustible.toString());
 		System.out.println(toString());
 		if (this.getCurrentTemprature() > getMaxTemprature()) {
 			throw new RuntimeException("Attention! The oven is overheated.!");
@@ -44,7 +43,7 @@ public class Oven implements ICombustible{
 
 	@Override
 	public String toString() {
-		return "Oven [maxTemprature=" + this.maxTemprature + ", currentTemprature=" + this.currentTemprature + "]";
+		return "Oven state is : [maxTemprature=" + this.maxTemprature + ", currentTemprature=" + this.currentTemprature + "]";
 	}
 
 

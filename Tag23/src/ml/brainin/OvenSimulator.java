@@ -17,19 +17,19 @@ public class OvenSimulator {
 			try {
 				switch (index) {
 				case 0:
-					cotton.burning(oven);
+					oven.burning(cotton);
 					break;
 				case 1:
-					paper.burning(oven);
+					oven.burning(paper);
 					break;
 				case 2:
-					coal.burning(oven);
+					oven.burning(coal);
 					break;
 				case 3:
-					turf.burning(oven);
+					oven.burning(turf);
 					break;
 				default:
-					wood.burning(oven);
+					oven.burning(wood);
 					break;
 				}
 			}catch(RuntimeException re) {
