@@ -1,4 +1,4 @@
-package ml.brainin;
+package ml.brainin.calculator.action;
 
 public class MyNumber {
 	private int numerator; // Zähler

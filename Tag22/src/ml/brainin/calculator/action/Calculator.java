@@ -1,7 +1,7 @@
-package ml.brainin;
+package ml.brainin.calculator.action;
 
 public class Calculator {
-	public void calculation(String expression) throws NumberFormatException{
+	public String calculation(String expression) throws NumberFormatException{
 		String operator = null;
 		String[] split = null;
 		if (expression.contains("*")) {
@@ -35,11 +35,13 @@ public class Calculator {
 		}else if (operator.equals("-")) {
 			result = subtraction(myNumber1, myNumber2);
 		}
+		String resultStr = null;
 		if (result.getDenumerator()%10==0) {
-			System.out.println(expression+" = "+((float)result.getNumerator()/(float)result.getDenumerator()));
+			resultStr = String.valueOf(((float)result.getNumerator()/(float)result.getDenumerator()));
 		}else {
-			System.out.println(expression+" = "+result);
+			resultStr = result.toString();
 		}
+		return resultStr;
 	}
 	private MyNumber multiplication(MyNumber myNumber1, MyNumber myNumber2) {
 		int numerator = myNumber1.getNumerator() * myNumber2.getNumerator();
