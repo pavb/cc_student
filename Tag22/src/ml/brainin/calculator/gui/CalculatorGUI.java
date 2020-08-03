@@ -7,7 +7,6 @@ import javax.swing.*;
 import javax.swing.JOptionPane;
 
 import ml.brainin.calculator.action.Calculator;
-import ml.brainin.calculator.action.ICalculator;
 
 /**
  *
