@@ -235,7 +235,7 @@ public class CalculatorGUI extends JFrame {
         b0.setText("0");
         b0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addChar("8");        
+                addChar("0");        
             }
         });
         jPanel8.add(b0);

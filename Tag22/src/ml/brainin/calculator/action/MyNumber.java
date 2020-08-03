@@ -1,12 +1,12 @@
 package ml.brainin.calculator.action;
 
 public class MyNumber {
-	private float numerator; // Zähler
-	private float denumerator; //  Nenner
+	private int numerator; // Zähler
+	private int denumerator; //  Nenner
 	private boolean hasPoint; // Dezimalzahl 
 	private boolean hasSlash;
 	public MyNumber() {}
-	public MyNumber(float numerator, float denumerator ) {
+	public MyNumber(int numerator, int denumerator ) {
 		this.setNumerator(numerator);
 		this.setDenumerator(denumerator);
 	}
@@ -14,10 +14,12 @@ public class MyNumber {
 	public MyNumber parser(String number) throws NumberFormatException{
 		try {
 			int num = Integer.parseInt(number); // ganze Zahl
+			System.out.println("num="+num);
 			this.setNumerator(num);
 			this.setDenumerator(1);
 			return this;
 		}catch(NumberFormatException en) {
+			
 		}
 		if ((!number.contains("/") && !number.contains(".")) || (number.contains("/") && number.contains("."))) {
 			throw new NumberFormatException("Fehler beim eingeben einer Zahl : "+number);
@@ -69,25 +71,25 @@ public class MyNumber {
 	private void setHasSlash() {
 		this.hasSlash = true;
 	}
-	private boolean hasPoint() {
+	public boolean hasPoint() {
 		return hasPoint;
 	}
 	private void setHasPoint() {
 		this.hasPoint = true;
 	}
-	private void setNumerator(float n) {
+	private void setNumerator(int n) {
 		this.numerator = n;
 	}
-	private void setDenumerator(float d) {
+	private void setDenumerator(int d) {
 		if (d == 0) {
 			throw new NumberFormatException("Fehler beim denumerator : 0");
 		}
 		this.denumerator = d;
 	}
-	public float getNumerator() {
+	public int getNumerator() {
 		return numerator;
 	}
-	public float getDenumerator() {
+	public int getDenumerator() {
 		return denumerator;
 	}
 	
