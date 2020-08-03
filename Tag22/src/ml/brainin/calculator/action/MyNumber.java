@@ -1,12 +1,12 @@
 package ml.brainin.calculator.action;
 
 public class MyNumber {
-	private int numerator; // Zähler
-	private int denumerator; //  Nenner
+	private float numerator; // Zähler
+	private float denumerator; //  Nenner
 	private boolean hasPoint; // Dezimalzahl 
 	private boolean hasSlash;
 	public MyNumber() {}
-	public MyNumber(int numerator, int denumerator ) {
+	public MyNumber(float numerator, float denumerator ) {
 		this.setNumerator(numerator);
 		this.setDenumerator(denumerator);
 	}
@@ -75,19 +75,19 @@ public class MyNumber {
 	private void setHasPoint() {
 		this.hasPoint = true;
 	}
-	private void setNumerator(int n) {
+	private void setNumerator(float n) {
 		this.numerator = n;
 	}
-	private void setDenumerator(int d) {
+	private void setDenumerator(float d) {
 		if (d == 0) {
 			throw new NumberFormatException("Fehler beim denumerator : 0");
 		}
 		this.denumerator = d;
 	}
-	public int getNumerator() {
+	public float getNumerator() {
 		return numerator;
 	}
-	public int getDenumerator() {
+	public float getDenumerator() {
 		return denumerator;
 	}
 	

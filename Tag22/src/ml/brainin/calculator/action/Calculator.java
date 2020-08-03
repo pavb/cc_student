@@ -44,18 +44,18 @@ public class Calculator {
 		return resultStr;
 	}
 	private MyNumber multiplication(MyNumber myNumber1, MyNumber myNumber2) {
-		int numerator = myNumber1.getNumerator() * myNumber2.getNumerator();
-		int denumerator = myNumber1.getDenumerator() * myNumber2.getDenumerator();
+		float numerator = myNumber1.getNumerator() * myNumber2.getNumerator();
+		float denumerator = myNumber1.getDenumerator() * myNumber2.getDenumerator();
 		return new MyNumber(numerator, denumerator); 
 	}
 	private MyNumber division(MyNumber myNumber1, MyNumber myNumber2) {
-		int numerator = myNumber1.getNumerator() * myNumber2.getDenumerator();
-		int denumerator = myNumber1.getDenumerator() * myNumber2.getNumerator();
+		float numerator = myNumber1.getNumerator() * myNumber2.getDenumerator();
+		float denumerator = myNumber1.getDenumerator() * myNumber2.getNumerator();
 		return new MyNumber(numerator, denumerator); 
 	}
 	private MyNumber addition(MyNumber myNumber1, MyNumber myNumber2) {
-		int numerator = 0;
-		int denumerator = 0;
+		float numerator = 0;
+		float denumerator = 0;
 		if (myNumber1.getDenumerator() != myNumber2.getDenumerator()) {
 			numerator = (myNumber1.getNumerator() * myNumber2.getDenumerator()) + (myNumber2.getNumerator() * myNumber1.getDenumerator());
 			denumerator = myNumber1.getDenumerator() * myNumber2.getDenumerator();
@@ -65,8 +65,8 @@ public class Calculator {
 		return new MyNumber(numerator, denumerator); 
 	}
 	private MyNumber subtraction(MyNumber myNumber1, MyNumber myNumber2) {
-		int numerator = 0;
-		int denumerator = 0;
+		float numerator = 0;
+		float denumerator = 0;
 		if (myNumber1.getDenumerator() != myNumber2.getDenumerator()) {
 			numerator = (myNumber1.getNumerator() * myNumber2.getDenumerator()) - (myNumber2.getNumerator() * myNumber1.getDenumerator());
 			denumerator = myNumber1.getDenumerator() * myNumber2.getDenumerator();
