@@ -1,6 +1,7 @@
 package ml.brainin.calculator;
 
 import ml.brainin.calculator.gui.CalculatorGUI;
+import ml.brainin.calculator.gui.frame.CalculatorMainFrame;
 
 public class SimpleCalculator {
 	
@@ -24,7 +25,7 @@ public class SimpleCalculator {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CalculatorGUI().setVisible(true);
+                new CalculatorMainFrame().setVisible(true);
             }
         });
     }

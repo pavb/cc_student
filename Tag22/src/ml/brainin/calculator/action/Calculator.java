@@ -1,9 +1,15 @@
 package ml.brainin.calculator.action;
 
-public class Calculator {
-	public String calculation(String expression) throws NumberFormatException{
+import ml.brainin.calculator.gui.label.IExpressionLabel;
+import ml.brainin.calculator.gui.label.IOutputLabel;
+
+public class Calculator implements ICalculator{
+	private IOutputLabel iOutputLabel;
+	@Override
+	public void calculation(IExpressionLabel iExpressionLabel) throws NumberFormatException{
 		String operator = null;
 		String[] split = null;
+		String expression = iExpressionLabel.getLable();
 		if (expression.contains("*")) {
 			operator = "*";
 			split = expression.split("\\*");
@@ -40,7 +46,8 @@ public class Calculator {
 		String resultStr = null;
 		System.out.println("result.getDenumerator()="+result.getDenumerator());
 		resultStr = String.valueOf(((float)result.getNumerator()/(float)result.getDenumerator()));
-		return resultStr;
+		iExpressionLabel.setLabel("");
+		this.iOutputLabel.setOutput(expression+"="+resultStr);
 	}
 	private MyNumber multiplication(MyNumber myNumber1, MyNumber myNumber2) {
 		int numerator = myNumber1.getNumerator() * myNumber2.getNumerator();
@@ -74,4 +81,16 @@ public class Calculator {
 		}
 		return new MyNumber(numerator, denumerator); 
 	}
+	@Override
+	public void setOutputLabel(IOutputLabel iOutputLabel) {
+		this.setiOutputLabel(iOutputLabel);
+		
+	}
+	private IOutputLabel getiOutputLabel() {
+		return iOutputLabel;
+	}
+	private void setiOutputLabel(IOutputLabel iOutputLabel) {
+		this.iOutputLabel = iOutputLabel;
+	}
+
 }

@@ -32,7 +32,7 @@ public class CalculatorGUI extends JFrame {
     }
     
     private void calculation() {
-    	try {
+    	/*try {
     		String expression = lExpression.getText();
     		if (!expression.isEmpty()) {
     			String result = calculator.calculation(expression);
@@ -45,7 +45,7 @@ public class CalculatorGUI extends JFrame {
     		}
 		}catch(NumberFormatException ex) {
 			showInputError("Error : "+ex.getLocalizedMessage());
-		}
+		}*/
     }
     private boolean isHasOperator(String chr) {
     	String expression = lExpression.getText();
