@@ -28,9 +28,7 @@ public class Aufgabe_ArrayList {
 		
 		List<String> listA3 = Arrays.asList("mo", "di", "mi", "do", "fr");
 		Iterator<String> iterator = listA3.iterator();
-		while(iterator.hasNext()) {
-			System.out.print(iterator.next()+" ");
-		}
+		iterator.forEachRemaining((number)->System.out.print(number+" "));
 		System.out.println();
 		
 		System.out.println("------ A4 -----");
