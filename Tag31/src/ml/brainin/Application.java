@@ -1,7 +1,7 @@
 package ml.brainin;
 
 public class Application {
-
+	static CreatureType a;
 	public void go() {
 		int creaturesCount = (int)(Math.random() * (10) + 1);
 		Stable stable = new Stable(creaturesCount);
